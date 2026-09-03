@@ -8,88 +8,47 @@
 
 <title>Daniele Pucello | MagicLand</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
-
 body{
-
 margin:0;
-
-min-height:100vh;
-
-font-family:'Segoe UI',Arial,sans-serif;
-
-background:
-linear-gradient(
-rgba(0,20,60,.85),
-rgba(0,20,60,.95)
-),
-url("background.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#001b44,#004a99);
 color:white;
-
+display:flex;
+justify-content:center;
 }
-
 
 
 .container{
-
 width:100%;
-
 max-width:430px;
-
 padding:20px;
-
 }
-
 
 
 .card{
 
+margin-top:20px;
 
 background:
+linear-gradient(160deg,#00245c,#00152f);
 
-rgba(0,35,90,.85);
+border:2px solid #e4b83f;
 
-
-backdrop-filter:blur(12px);
-
-
-border-radius:35px;
-
-
-border:
-
-2px solid #e5b93f;
-
+border-radius:30px;
 
 padding:30px;
 
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.7);
-
-
 text-align:center;
 
+box-shadow:0 20px 50px #000;
 
 }
 
@@ -97,9 +56,7 @@ text-align:center;
 
 .logo{
 
-width:240px;
-
-margin-bottom:10px;
+width:220px;
 
 }
 
@@ -107,37 +64,18 @@ margin-bottom:10px;
 
 .name{
 
-font-size:32px;
-
+font-size:30px;
 font-weight:900;
-
-color:#f4c542;
-
-letter-spacing:1px;
+color:#e4b83f;
+margin-top:20px;
 
 }
-
 
 
 .role{
 
-font-size:17px;
-
-letter-spacing:4px;
-
-margin-top:8px;
-
-}
-
-
-
-.divider{
-
-height:2px;
-
-background:#e5b93f;
-
-margin:25px 0;
+letter-spacing:3px;
+margin-bottom:25px;
 
 }
 
@@ -146,20 +84,15 @@ margin:25px 0;
 .info{
 
 text-align:left;
-
-font-size:16px;
-
-line-height:2.2;
+line-height:2;
 
 }
 
 
-
 .info i{
 
-color:#e5b93f;
-
-width:28px;
+color:#e4b83f;
+width:25px;
 
 }
 
@@ -167,43 +100,25 @@ width:28px;
 
 .btn{
 
-display:flex;
+display:block;
 
-align-items:center;
+margin-top:15px;
 
-justify-content:center;
+padding:15px;
 
-gap:10px;
+border-radius:15px;
 
+background:#e4b83f;
 
-margin-top:18px;
+color:#001b44;
 
-
-padding:16px;
-
-
-border-radius:18px;
-
-
-font-weight:700;
-
+font-weight:bold;
 
 text-decoration:none;
 
+border:none;
 
-background:#e5b93f;
-
-
-color:#001b45;
-
-
-}
-
-
-
-.btn:hover{
-
-transform:scale(1.03);
+cursor:pointer;
 
 }
 
@@ -211,31 +126,54 @@ transform:scale(1.03);
 
 .whatsapp{
 
-background:#19c35b;
-
+background:#20c65a;
 color:white;
 
 }
 
 
 
-.site{
+.share{
 
-background:#004da8;
-
+background:#0066cc;
 color:white;
-
-border:1px solid #e5b93f;
 
 }
 
 
 
-.qr{
+.social{
 
 margin-top:25px;
 
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
 }
+
+
+.social a{
+
+width:40px;
+height:40px;
+
+background:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:20px;
+
+}
+
 
 
 .qr img{
@@ -246,101 +184,59 @@ background:white;
 
 padding:10px;
 
-border-radius:15px;
+border-radius:10px;
 
 }
 
 
 
-.qr p{
+/* CARD IMMAGINE */
 
-font-size:13px;
+#downloadCard{
 
-color:#ddd;
+position:absolute;
 
-}
+left:-9999px;
 
+width:900px;
 
+height:500px;
 
-.social-title{
+background:#00245c;
 
-margin-top:30px;
+border:5px solid #e4b83f;
 
-color:#e5b93f;
+border-radius:40px;
 
-font-weight:bold;
-
-font-size:18px;
-
-}
-
-
-
-.social{
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-margin-top:15px;
-
-}
-
-
-
-.social a{
-
-
-height:42px;
-
-width:42px;
-
-background:white;
-
-border-radius:50%;
-
+padding:40px;
 
 display:flex;
 
 align-items:center;
 
-justify-content:center;
-
-
-font-size:20px;
-
+gap:50px;
 
 }
 
 
 
-.instagram{color:#E1306C;}
+#downloadCard img{
 
-.facebook{color:#1877F2;}
+width:220px;
 
-.tiktok{color:#000;}
-
-.youtube{color:#FF0000;}
-
-.linkedin{color:#0A66C2;}
+}
 
 
+.cardText{
 
-.footer{
-
-margin-top:25px;
-
-font-size:13px;
-
-color:#ddd;
+font-size:30px;
 
 }
 
 
 
 </style>
+
 
 </head>
 
@@ -357,59 +253,48 @@ color:#ddd;
 <img src="logo.png" class="logo">
 
 
-
 <div class="name">
-
 DANIELE PUCELLO
-
 </div>
-
 
 
 <div class="role">
-
 IT SPECIALIST
-
 </div>
-
-
-
-<div class="divider"></div>
-
 
 
 <div class="info">
 
-
-<div>
+<p>
 <i class="fa-solid fa-phone"></i>
-+39 345 678 9123
-</div>
++39 345 6789123
+</p>
 
 
-<div>
+<p>
 <i class="fa-solid fa-envelope"></i>
 daniele.pucello@magicland.it
-</div>
+</p>
 
 
-<div>
+<p>
 <i class="fa-solid fa-globe"></i>
 www.magicland.it
-</div>
+</p>
 
 
-<div>
+<p>
 <i class="fa-solid fa-location-dot"></i>
-MagicLand - Valmontone (RM)
-</div>
+MagicLand - Valmontone
+</p>
 
 
 </div>
 
 
 
-<a class="btn" href="Daniele_Pucello_MagicLand.vcf">
+<a class="btn"
+href="Daniele_Pucello_MagicLand.vcf">
 
 <i class="fa-solid fa-address-card"></i>
 
@@ -419,71 +304,70 @@ SALVA CONTATTO
 
 
 
-<a class="btn whatsapp" href="https://wa.me/393456789123">
+
+<a class="btn whatsapp"
+href="https://wa.me/393456789123">
 
 <i class="fa-brands fa-whatsapp"></i>
 
-SCRIVIMI SU WHATSAPP
+WHATSAPP
 
 </a>
 
 
 
-<a class="btn site" href="https://www.magicland.it">
 
-<i class="fa-solid fa-globe"></i>
+<button class="btn share"
+onclick="condividi()">
 
-VISITA IL SITO UFFICIALE
+<i class="fa-solid fa-share-nodes"></i>
 
-</a>
+CONDIVIDI CARD
+
+</button>
+
+
+
+
+<button class="btn"
+onclick="scaricaCard()">
+
+<i class="fa-solid fa-image"></i>
+
+SCARICA BIGLIETTO PNG
+
+</button>
 
 
 
 
 <div class="qr">
 
+<p>Scansiona per salvare il contatto</p>
+
 <img src="QR_MagicLand_demo.png">
 
-<p>
-Inquadra per condividere il mio contatto
-</p>
-
 </div>
 
-
-
-<div class="social-title">
-
-SEGUICI SU
-
-</div>
 
 
 
 <div class="social">
 
 
-<a class="instagram">
+<a>
 <i class="fa-brands fa-instagram"></i>
 </a>
 
-
-<a class="facebook">
+<a>
 <i class="fa-brands fa-facebook"></i>
 </a>
 
-
-<a class="tiktok">
+<a>
 <i class="fa-brands fa-tiktok"></i>
 </a>
 
-
-<a class="youtube">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-
-<a class="linkedin">
+<a>
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
@@ -491,23 +375,120 @@ SEGUICI SU
 </div>
 
 
+</div>
 
-<div class="footer">
 
-🎢 La capitale del divertimento
+</div>
+
+
+
+
+
+<!-- CARD CHE VIENE TRASFORMATA IN PNG -->
+
+
+<div id="downloadCard">
+
+
+<img src="logo.png">
+
+
+<div class="cardText">
+
+
+<b>DANIELE PUCELLO</b>
 
 <br>
 
-MagicLand 15 Anniversary
+IT SPECIALIST
+
+<br><br>
+
+📞 +39 3456789123
+
+<br>
+
+✉ daniele.pucello@magicland.it
+
+<br>
+
+🌐 magicland.it
+
+
+</div>
+
+
+<img src="QR_MagicLand_demo.png">
+
 
 </div>
 
 
 
-</div>
 
 
-</div>
+<script>
+
+
+function scaricaCard(){
+
+
+html2canvas(document.querySelector("#downloadCard"))
+
+.then(canvas=>{
+
+
+let link=document.createElement("a");
+
+
+link.download="Daniele_Pucello_MagicLand.png";
+
+
+link.href=canvas.toDataURL();
+
+
+link.click();
+
+
+});
+
+
+}
+
+
+
+async function condividi(){
+
+
+if(navigator.share){
+
+
+await navigator.share({
+
+title:"Daniele Pucello - MagicLand",
+
+text:"Contatto digitale MagicLand",
+
+url:window.location.href
+
+});
+
+
+}
+
+else{
+
+alert("Apri questa pagina dal telefono per condividere");
+
+}
+
+
+}
+
+
+
+</script>
+
 
 
 </body>
