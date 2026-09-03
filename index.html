@@ -16,39 +16,83 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#001b44,#004a99);
-color:white;
-display:flex;
-justify-content:center;
+*{
+box-sizing:border-box;
 }
+
+
+body{
+
+margin:0;
+
+min-height:100vh;
+
+font-family:'Segoe UI',Arial,sans-serif;
+
+background:
+
+linear-gradient(
+rgba(0,20,60,.75),
+rgba(0,20,60,.90)
+),
+
+url("magicland.jpeg");
+
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
 
 
 .container{
+
 width:100%;
+
 max-width:430px;
+
 padding:20px;
+
 }
+
 
 
 .card{
 
-margin-top:20px;
-
 background:
-linear-gradient(160deg,#00245c,#00152f);
 
-border:2px solid #e4b83f;
+linear-gradient(
+160deg,
+rgba(0,35,90,.92),
+rgba(0,15,45,.95)
+);
 
-border-radius:30px;
+
+border-radius:35px;
+
+border:2px solid #e5bb45;
 
 padding:30px;
 
 text-align:center;
 
-box-shadow:0 20px 50px #000;
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.8);
+
+backdrop-filter:blur(8px);
 
 }
 
@@ -56,7 +100,11 @@ box-shadow:0 20px 50px #000;
 
 .logo{
 
-width:220px;
+width:230px;
+
+max-width:90%;
+
+margin-bottom:15px;
 
 }
 
@@ -64,18 +112,37 @@ width:220px;
 
 .name{
 
-font-size:30px;
+font-size:32px;
+
 font-weight:900;
-color:#e4b83f;
-margin-top:20px;
+
+color:#f4c542;
+
+letter-spacing:1px;
 
 }
 
 
+
 .role{
 
-letter-spacing:3px;
-margin-bottom:25px;
+font-size:17px;
+
+letter-spacing:4px;
+
+margin-top:8px;
+
+}
+
+
+
+.divider{
+
+height:2px;
+
+background:#e5bb45;
+
+margin:25px 0;
 
 }
 
@@ -84,15 +151,20 @@ margin-bottom:25px;
 .info{
 
 text-align:left;
-line-height:2;
+
+font-size:16px;
+
+line-height:2.2;
 
 }
 
 
+
 .info i{
 
-color:#e4b83f;
-width:25px;
+color:#f4c542;
+
+width:28px;
 
 }
 
@@ -100,25 +172,35 @@ width:25px;
 
 .btn{
 
-display:block;
+width:100%;
 
-margin-top:15px;
+display:flex;
 
-padding:15px;
+justify-content:center;
 
-border-radius:15px;
+align-items:center;
 
-background:#e4b83f;
+gap:10px;
 
-color:#001b44;
+margin-top:16px;
 
-font-weight:bold;
+padding:16px;
 
-text-decoration:none;
+border-radius:18px;
 
 border:none;
 
+font-weight:bold;
+
+font-size:15px;
+
 cursor:pointer;
+
+text-decoration:none;
+
+background:#f4c542;
+
+color:#001b44;
 
 }
 
@@ -127,6 +209,7 @@ cursor:pointer;
 .whatsapp{
 
 background:#20c65a;
+
 color:white;
 
 }
@@ -136,41 +219,16 @@ color:white;
 .share{
 
 background:#0066cc;
+
 color:white;
 
 }
 
 
 
-.social{
+.qr{
 
 margin-top:25px;
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-}
-
-
-.social a{
-
-width:40px;
-height:40px;
-
-background:white;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:20px;
 
 }
 
@@ -178,61 +236,208 @@ font-size:20px;
 
 .qr img{
 
-width:120px;
+width:130px;
 
 background:white;
 
 padding:10px;
 
-border-radius:10px;
+border-radius:15px;
 
 }
 
 
 
-/* CARD IMMAGINE */
+.social-title{
+
+margin-top:30px;
+
+color:#f4c542;
+
+font-weight:bold;
+
+}
+
+
+
+.social{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+
+
+.social a{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:20px;
+
+}
+
+
+
+.instagram{
+
+color:#E1306C;
+
+}
+
+
+.facebook{
+
+color:#1877F2;
+
+}
+
+
+.tiktok{
+
+color:#000;
+
+}
+
+
+.youtube{
+
+color:#FF0000;
+
+}
+
+
+.linkedin{
+
+color:#0A66C2;
+
+}
+
+
+
+.footer{
+
+margin-top:25px;
+
+font-size:13px;
+
+color:#ddd;
+
+}
+
+
+
+
+/* CARD PNG GENERATA */
 
 #downloadCard{
+
 
 position:absolute;
 
 left:-9999px;
 
-width:900px;
 
-height:500px;
+width:1000px;
 
-background:#00245c;
+height:560px;
 
-border:5px solid #e4b83f;
 
-border-radius:40px;
+padding:45px;
 
-padding:40px;
 
 display:flex;
 
 align-items:center;
 
-gap:50px;
+gap:60px;
+
+
+border-radius:40px;
+
+
+border:6px solid #e5bb45;
+
+
+background:
+
+
+linear-gradient(
+rgba(0,30,80,.75),
+rgba(0,30,80,.85)
+),
+
+url("magicland.jpeg");
+
+
+background-size:cover;
+
+background-position:center;
+
+
+color:white;
+
 
 }
 
 
 
-#downloadCard img{
+#downloadCard img.logoCard{
 
-width:220px;
+width:230px;
 
 }
+
 
 
 .cardText{
 
-font-size:30px;
+font-size:32px;
+
+line-height:1.5;
 
 }
 
+
+
+.cardText span{
+
+color:#f4c542;
+
+font-weight:bold;
+
+}
+
+
+
+.qrCard{
+
+width:160px;
+
+background:white;
+
+padding:15px;
+
+border-radius:20px;
+
+}
 
 
 </style>
@@ -244,49 +449,68 @@ font-size:30px;
 <body>
 
 
+
 <div class="container">
 
 
-<div class="card">
+<div class="card" id="mobileCard">
 
 
 <img src="logo.png" class="logo">
 
 
 <div class="name">
+
 DANIELE PUCELLO
+
 </div>
 
 
 <div class="role">
+
 IT SPECIALIST
+
 </div>
+
+
+
+<div class="divider"></div>
+
 
 
 <div class="info">
 
-<p>
+
+<div>
 <i class="fa-solid fa-phone"></i>
+
 +39 345 6789123
-</p>
+
+</div>
 
 
-<p>
+<div>
 <i class="fa-solid fa-envelope"></i>
+
 daniele.pucello@magicland.it
-</p>
+
+</div>
 
 
-<p>
+<div>
 <i class="fa-solid fa-globe"></i>
+
 www.magicland.it
-</p>
+
+</div>
 
 
-<p>
+<div>
 <i class="fa-solid fa-location-dot"></i>
+
 MagicLand - Valmontone
-</p>
+
+</div>
 
 
 </div>
@@ -316,7 +540,6 @@ WHATSAPP
 
 
 
-
 <button class="btn share"
 onclick="condividi()">
 
@@ -343,31 +566,51 @@ SCARICA BIGLIETTO PNG
 
 <div class="qr">
 
-<p>Scansiona per salvare il contatto</p>
+<p>
+Inquadra per salvare il contatto
+</p>
+
 
 <img src="QR_MagicLand_demo.png">
+
 
 </div>
 
 
 
 
+<div class="social-title">
+
+SEGUICI SU
+
+</div>
+
+
+
 <div class="social">
 
 
-<a>
+<a class="instagram">
 <i class="fa-brands fa-instagram"></i>
 </a>
 
-<a>
+
+<a class="facebook">
 <i class="fa-brands fa-facebook"></i>
 </a>
 
-<a>
+
+<a class="tiktok">
 <i class="fa-brands fa-tiktok"></i>
 </a>
 
-<a>
+
+<a class="youtube">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+
+<a class="linkedin">
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
@@ -375,28 +618,38 @@ SCARICA BIGLIETTO PNG
 </div>
 
 
+
+
+<div class="footer">
+
+🎢 La capitale del divertimento
+
+<br>
+
+MagicLand 15 Anniversary
+
 </div>
 
 
 </div>
 
 
+</div>
 
 
 
-<!-- CARD CHE VIENE TRASFORMATA IN PNG -->
 
 
 <div id="downloadCard">
 
 
-<img src="logo.png">
+<img src="logo.png" class="logoCard">
 
 
 <div class="cardText">
 
 
-<b>DANIELE PUCELLO</b>
+<span>DANIELE PUCELLO</span>
 
 <br>
 
@@ -404,7 +657,7 @@ IT SPECIALIST
 
 <br><br>
 
-📞 +39 3456789123
+📞 +39 345 6789123
 
 <br>
 
@@ -412,16 +665,18 @@ IT SPECIALIST
 
 <br>
 
-🌐 magicland.it
+🌐 www.magicland.it
 
 
 </div>
 
 
-<img src="QR_MagicLand_demo.png">
+
+<img src="QR_MagicLand_demo.png" class="qrCard">
 
 
 </div>
+
 
 
 
@@ -433,7 +688,13 @@ IT SPECIALIST
 function scaricaCard(){
 
 
-html2canvas(document.querySelector("#downloadCard"))
+html2canvas(
+document.querySelector("#downloadCard"),
+{
+scale:3
+}
+
+)
 
 .then(canvas=>{
 
@@ -444,7 +705,7 @@ let link=document.createElement("a");
 link.download="Daniele_Pucello_MagicLand.png";
 
 
-link.href=canvas.toDataURL();
+link.href=canvas.toDataURL("image/png");
 
 
 link.click();
@@ -454,6 +715,7 @@ link.click();
 
 
 }
+
 
 
 
@@ -467,7 +729,7 @@ await navigator.share({
 
 title:"Daniele Pucello - MagicLand",
 
-text:"Contatto digitale MagicLand",
+text:"Biglietto digitale MagicLand",
 
 url:window.location.href
 
@@ -478,13 +740,13 @@ url:window.location.href
 
 else{
 
-alert("Apri questa pagina dal telefono per condividere");
+
+alert("Apri la pagina dal telefono per condividere");
 
 }
 
 
 }
-
 
 
 </script>
