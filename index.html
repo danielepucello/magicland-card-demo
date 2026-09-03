@@ -1,122 +1,452 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Daniele Pucello | MagicLand</title>
 
+
+<!-- LOGHI SOCIAL UFFICIALI -->
+<link 
+rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
 <style>
 
-body{
-margin:0;
-font-family:'Arial',sans-serif;
-background:#061b45;
-color:white;
+
+*{
+box-sizing:border-box;
 }
+
+
+body{
+
+margin:0;
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#001b44,
+#003b78
+);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
+
 
 .container{
-max-width:420px;
-margin:auto;
+
+width:100%;
+
+max-width:430px;
+
 padding:20px;
+
 }
 
+
+
 .card{
-background:linear-gradient(160deg,#001d4d,#003b80);
-border-radius:25px;
-padding:25px;
-box-shadow:0 15px 40px #000;
+
+
+background:
+
+linear-gradient(
+160deg,
+rgba(0,20,60,.95),
+rgba(0,60,130,.95)
+);
+
+
+border-radius:30px;
+
+
+padding:30px;
+
+
+border:
+
+2px solid #d8aa3c;
+
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.6);
+
+
 text-align:center;
-border:2px solid #d8aa3c;
+
+
+overflow:hidden;
+
+
 }
+
 
 
 .logo{
+
+
 width:230px;
-margin-bottom:10px;
+
+
+max-width:80%;
+
+
+margin-bottom:20px;
+
+
 }
+
 
 
 .name{
+
+
 font-size:32px;
-font-weight:bold;
-color:#f3c552;
+
+
+font-weight:900;
+
+
+letter-spacing:1px;
+
+
+color:#f5c85b;
+
+
 }
 
+
+
 .role{
+
+
 font-size:18px;
-letter-spacing:2px;
-margin-bottom:25px;
+
+
+letter-spacing:3px;
+
+
+margin-top:8px;
+
+
+margin-bottom:30px;
+
+
+color:white;
+
+
 }
+
+
+
+.line{
+
+
+height:2px;
+
+
+background:#d8aa3c;
+
+
+margin:20px 0;
+
+
+}
+
 
 
 .info{
+
+
 text-align:left;
+
+
 font-size:16px;
+
+
 line-height:2;
+
+
 }
 
 
-.button{
+
+.info i{
+
+
+color:#f5c85b;
+
+
+width:25px;
+
+
+}
+
+
+
+.btn{
+
 
 display:block;
-margin:15px 0;
-padding:15px;
-border-radius:15px;
+
+
+margin-top:18px;
+
+
+padding:16px;
+
+
+border-radius:18px;
+
+
 text-decoration:none;
+
+
 font-weight:bold;
-color:white;
-background:#d8aa3c;
+
+
+color:#001b44;
+
+
+background:#f5c85b;
+
+
+transition:.3s;
+
 
 }
+
+
+
+.btn:hover{
+
+
+transform:scale(1.04);
+
+
+}
+
 
 
 .whatsapp{
-background:#18b957;
+
+
+background:#25D366;
+
+
+color:white;
+
+
 }
+
+
+
+.website{
+
+
+background:#004fa3;
+
+
+color:white;
+
+
+border:1px solid #f5c85b;
+
+
+}
+
+
+
+
+.social-title{
+
+
+margin-top:30px;
+
+
+font-size:18px;
+
+
+color:#f5c85b;
+
+
+font-weight:bold;
+
+
+}
+
+
 
 
 .social{
 
+
 display:flex;
+
+
 justify-content:center;
-gap:15px;
-margin-top:25px;
+
+
+gap:18px;
+
+
+margin-top:15px;
+
 
 }
+
 
 
 .social a{
 
-background:white;
-color:#061b45;
-width:45px;
+
 height:45px;
+
+
+width:45px;
+
+
 border-radius:50%;
+
+
+background:white;
+
+
 display:flex;
-align-items:center;
+
+
 justify-content:center;
-font-weight:bold;
+
+
+align-items:center;
+
+
+font-size:22px;
+
+
+color:#003b78;
+
+
 text-decoration:none;
 
+
+transition:.3s;
+
+
 }
+
+
+
+.social a:hover{
+
+
+transform:translateY(-5px);
+
+
+}
+
+
+
+.instagram{
+
+color:#E1306C!important;
+
+}
+
+
+.facebook{
+
+color:#1877F2!important;
+
+}
+
+
+.tiktok{
+
+color:#000!important;
+
+}
+
+
+.youtube{
+
+color:#FF0000!important;
+
+}
+
+
+.linkedin{
+
+color:#0A66C2!important;
+
+}
+
 
 
 .footer{
 
+
 margin-top:30px;
+
+
 font-size:13px;
+
+
 color:#ddd;
+
 
 }
 
 
+
+.badge{
+
+
+margin-top:15px;
+
+
+font-size:12px;
+
+
+color:#f5c85b;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
 </style>
+
 
 </head>
 
 
 <body>
+
 
 
 <div class="container">
@@ -125,96 +455,185 @@ color:#ddd;
 <div class="card">
 
 
-<img class="logo" src="logo.png">
+<img 
+src="logo.png"
+class="logo"
+alt="MagicLand">
 
 
 <div class="name">
+
 DANIELE PUCELLO
+
 </div>
 
 
 <div class="role">
+
 IT SPECIALIST
+
 </div>
+
+
+
+<div class="line"></div>
 
 
 
 <div class="info">
 
-📞 +39 345 678 9123<br>
 
-✉ daniele.pucello@magicland.it<br>
+<div>
+<i class="fa-solid fa-phone"></i>
 
-🌐 www.magicland.it<br>
++39 345 678 9123
 
-📍 MagicLand - Valmontone (RM)
+</div>
+
+
+<div>
+<i class="fa-solid fa-envelope"></i>
+
+daniele.pucello@magicland.it
+
+</div>
+
+
+<div>
+<i class="fa-solid fa-globe"></i>
+
+www.magicland.it
+
+</div>
+
+
+<div>
+<i class="fa-solid fa-location-dot"></i>
+
+MagicLand - Valmontone (RM)
+
+</div>
+
 
 </div>
 
 
 
-<a class="button" href="Marco_Rossi_MagicLand.vcf">
-💾 SALVA CONTATTO
+
+<a 
+class="btn"
+href="Marco_Rossi_MagicLand.vcf">
+
+<i class="fa-solid fa-address-card"></i>
+
+SALVA CONTATTO
+
 </a>
 
 
 
-<a class="button whatsapp" 
+
+<a 
+class="btn whatsapp"
 href="https://wa.me/393456789123">
 
-💬 SCRIVIMI SU WHATSAPP
+<i class="fa-brands fa-whatsapp"></i>
+
+SCRIVIMI SU WHATSAPP
 
 </a>
 
 
 
-<a class="button" 
-href="https://magicland.it">
+<a 
+class="btn website"
+href="https://www.magicland.it">
 
-🌐 VISITA IL SITO UFFICIALE
+<i class="fa-solid fa-globe"></i>
+
+VISITA IL SITO UFFICIALE
 
 </a>
 
 
 
-<h3>
+
+<div class="social-title">
+
 SEGUICI SU
-</h3>
+
+</div>
 
 
 
 <div class="social">
 
 
-<a href="#">IG</a>
+<a href="#" class="instagram">
 
-<a href="#">FB</a>
+<i class="fa-brands fa-instagram"></i>
 
-<a href="#">TT</a>
+</a>
 
-<a href="#">YT</a>
 
-<a href="#">IN</a>
+<a href="#" class="facebook">
+
+<i class="fa-brands fa-facebook"></i>
+
+</a>
+
+
+
+<a href="#" class="tiktok">
+
+<i class="fa-brands fa-tiktok"></i>
+
+</a>
+
+
+
+<a href="#" class="youtube">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+
+<a href="#" class="linkedin">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
 
 
 </div>
+
 
 
 
 <div class="footer">
 
+
 🎢 La capitale del divertimento
 
-<br><br>
 
-MagicLand 15 Anniversary
+</div>
+
+
+<div class="badge">
+
+MAGICLAND 15 ANNIVERSARY
+
+</div>
+
+
 
 </div>
 
 
 </div>
 
-</div>
 
 
 </body>
